@@ -22,6 +22,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
+#include "global_contral.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -115,7 +117,9 @@ int main(void)
   MX_TIM6_Init();
   MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-
+  Global_Init();
+  
+  
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -123,7 +127,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-
+    Global_Loop(); 
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
